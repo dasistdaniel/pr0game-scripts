@@ -23,8 +23,8 @@
     const theader_place = theader.insertCell(6)
     theader_place.outerHTML = "<th>Platz</th>"
 
-    for (let p = 0; p < 15; p++) {
-        const planetTR = document.querySelector(".table569 > tbody:nth-child(1) > tr:nth-child(" + (p+3) + ")")
+    for (let p = 1; p < 16; p++) {
+        const planetTR = document.querySelector('tr[data-info="p_' + p + '"]')
         let playerplace = 0
         try {
             const playerTD = planetTR.querySelector('td:nth-child(6) .tooltip_sticky').dataset.tooltipContent
